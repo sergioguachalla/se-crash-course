@@ -28,16 +28,16 @@ Normalmente, una API perimite a un servicio acceder a los datos o funcionalidade
 - **Códigos de estado:**  
   - `200` OK  
   - `404` No encontrado  
-  - `500` Error del servidor
+  - `500` Error del servidor 
   - Acá están más códigos de estado: https://developer.mozilla.org/es/docs/Web/HTTP/Status
 
 ---
 
 ## JSON
 
-Es un formato de texto para intercambiar datos entre sistemas.
+Es un formato de texto que normalmente se usa en las APIs.
 
-Estructura básica:
+Estructura:
 - Usa llaves `{}` para objetos
 - Usa corchetes `[]` para arrays
 - Los datos son pares de `"clave": valor`
