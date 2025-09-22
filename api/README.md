@@ -1,11 +1,20 @@
-# Consumir APIs 
+
+
+## Tabla de Contenidos
+
+- [Tabla de Contenidos](#tabla-de-contenidos)
+- [Qué es un API](#qué-es-un-api)
+- [Conceptos mínimoss](#conceptos-mínimoss)
+- [JSON](#json)
+- [Ejemplos](#ejemplos)
+
 
 ## Qué es un API
 Es como una puerta de entrada/portero que permite a diferentes servicios comunicarse entre sí.
 Normalmente, una API perimite a un servicio acceder a los datos o funcionalidades de otro servicio.
 
 
-## Conceptos mínimos 
+## Conceptos mínimoss
 - **Endpoint (URL):** dirección a la que haces la request, es como un recurso
   Ej.: `https://api_de_la_empresa.com/recetas`
 - **Métodos HTTP:**  
@@ -61,5 +70,5 @@ data = json.loads(response.text)
 print(data['nombre'])  # Imprime: Receta 1
 ```
 ## Ejemplos
-- Get => **Acá**
-- Post => **Acá**
+- Get => [**Acá**](./scripts/get.py)
+- Post => [**Acá**](./scripts/post.py)
