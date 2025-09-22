@@ -1,5 +1,24 @@
-#Git y Github
+# Git y Github
 
+## Tabla de contenidos
+
+- [Git y Github](#git-y-github)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+  - [Git](#git)
+  - [Github](#github)
+  - [Repositorio](#repositorio)
+  - [Commit](#commit)
+  - [Branch](#branch)
+  - [Merge](#merge)
+  - [Pull Request](#pull-request)
+  - [Comandos y workflows](#comandos-y-workflows)
+    - [Comandos básicos](#comandos-básicos)
+    - [Comandos avanzados](#comandos-avanzados)
+    - [Workflow](#workflow)
+      - [Crear un repositorio](#crear-un-repositorio)
+      - [Actualizar un repositorio](#actualizar-un-repositorio)
+  
+  
 ## Git
 Git es un sistema de control de versiones. Básicamente es como una máquina de tiempo para el código. También permite regresar y crear nuevas versiones o "líneas de tiempo" como en Dr. Strange.
 Entonces es como si estuvieras trabajando en una nueva receta y
@@ -52,6 +71,8 @@ Un poquito más de teoria. Existen 3 etapas, unstaged, staged y committed.
 - `git branch -m <nombre>`: Renombra la branch actual.
 - `git branch -m <nombre> <nuevo_nombre>`: Renombra una branch.
 - `git commit --amend -m "nuevo mensaje"`: Modifica el último commit, si **es que no hiciste push** y te equivocaste en el mensaje.
+- `git checkout <branch>`: Cambia a otra branch.
+- `git checkout -b <nombre>`: Crea una nueva branch y cambia a ella.
 
 
 ### Comandos avanzados
@@ -63,18 +84,19 @@ Un poquito más de teoria. Existen 3 etapas, unstaged, staged y committed.
 
 ### Workflow
 #### Crear un repositorio
-- `mkdir <nombre_del_repositorio>`: Crea una nueva carpeta para el repositorio (1).
-- `cd <nombre_del_repositorio>`: Entras en la carpeta del repositorio (2).
-- `git init`: Inicializa un repositorio en la carpeta actual (3).
-- `git add .`: Añade todos los archivos al área de preparación (4).
-- `git commit -m "Initial commit"`: Crea un commit con los cambios en el área de preparación (5).
-- `git remote add origin <url>`: Añade un repositorio remoto (6).
-- `git push -u origin main`: Sube los cambios locales al repositorio remoto (7).
+- `mkdir <nombre_del_repositorio>`: Crea una nueva carpeta para el repositorio (1) ![image](static/1.png)
+- `cd <nombre_del_repositorio>`: Entras en la carpeta del repositorio (2) ![image](static/2.png)
+- `git init`: Inicializa un repositorio en la carpeta actual (3)
+- `git add .`: Añade todos los archivos al área de preparación (4). ![image](static/3_y_4.png)
+- `git commit -m "Initial commit"`: Crea un commit con los cambios en el área de preparación (5). ![image](static/5.png)
+- `git remote add origin <url>`: Añade un repositorio remoto (6)
+- `git push -u origin main`: Sube los cambios locales al repositorio remoto (7). ![image](static/6_y_7.png)
 
 #### Actualizar un repositorio
-- `git pull`: Trae los cambios remotos y los fusiona con tu branch local (1).
+- `git pull`: Trae los cambios remotos y los fusiona con tu branch local (1) ![image](static/1_1.png)
 - `git add .`: Añade todos los archivos al área de preparación (2).
-- `git commit -m "Update commit"`: Crea un commit con los cambios en el área de preparación (3).
-- `git push`: Sube los cambios locales al repositorio remoto (4).
+- `git commit -m "Update commit"`: Crea un commit con los cambios en el área de staging (3) ![image](static/2_3.png)
+- `git push`: Sube los cambios locales al repositorio remoto (4) ![image](static/4.png)
 
 
+Ahora para ver como consumir datos de un API muevete a la rama `api`.
