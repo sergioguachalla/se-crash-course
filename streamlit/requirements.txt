@@ -1,2 +1,5 @@
 streamlit
-requests # Esta librería te permite realizar solicitudes
+requests # Con esta librería haces peticiones y consumes APIs
+pandas # Panditas de toda la vida
+
+

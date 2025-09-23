@@ -9,8 +9,8 @@ class Recipe(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     title: Mapped[str] = mapped_column(String(160), index=True)
     description: Mapped[str | None] = mapped_column(Text, nullable=True)
-    ingredients: Mapped[str] = mapped_column(Text)  # 1 por línea o CSV
-    steps: Mapped[str] = mapped_column(Text)        # 1 por línea
+    ingredients: Mapped[str] = mapped_column(Text)  
+    steps: Mapped[str] = mapped_column(Text)        
     servings: Mapped[int] = mapped_column(Integer, default=1)
     prep_minutes: Mapped[int] = mapped_column(Integer, default=0)
     vegetarian: Mapped[bool] = mapped_column(Boolean, default=False)
