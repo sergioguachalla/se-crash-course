@@ -1,0 +1,2 @@
+streamlit
+requests # Esta librería te permite realizar solicitudes

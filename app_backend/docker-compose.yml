@@ -1,0 +1,33 @@
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: demo_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: appdb #Nombre de tu base de datos
+      MYSQL_USER: appuser #Usuario de la base de datos (Esto igual es bueno ponerlo en .env)
+      MYSQL_PASSWORD: secretpass #Contraseña de la base de datos (Esto igual es bueno ponerlo en .env)
+      MYSQL_ROOT_PASSWORD: rootpass #Contraseña de root de la base de datos (Esto igual es mandatory ponerlo en .env!) 
+    ports:
+      - "3305:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
+    command: [
+      "--default-authentication-plugin=caching_sha2_password",
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci"
+    ]
+
+  adminer:
+    image: adminer:4
+    container_name: se_demo_adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
