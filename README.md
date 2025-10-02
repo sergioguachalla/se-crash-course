@@ -1,4 +1,5 @@
 # Setup
+- Clona el repo con `git clone https://github.com/sergioguachalla/se-crash-course.git`
 - verifica si tienes make instalado
 - corre `make setup`
 - luego puedes:
