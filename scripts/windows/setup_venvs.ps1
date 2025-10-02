@@ -1,10 +1,8 @@
 Param(
-  # Carpetas donde quieres el venv
   [string[]]$Dirs = @(
     "./se-crash-course/app_backend",
     "./se-crash-course/streamlit"
   ),
-  # Si se desea intentar instalar Python automáticamente (usa tu install_tools.ps1)
   [switch]$AutoInstall
 )
 
@@ -12,7 +10,6 @@ $ErrorActionPreference = "Stop"
 
 function Test-Cmd { param([string]$cmd) Get-Command $cmd -ErrorAction SilentlyContinue }
 
-# Asegurar Python si se pide
 if (-not (Test-Cmd "python")) {
   if ($AutoInstall) {
     Write-Host "Python no detectado. Intentando instalar..." -ForegroundColor Yellow
