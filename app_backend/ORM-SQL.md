@@ -2,6 +2,7 @@
 
 ## Modelos (nuevamente)
 Básicamente representas una tabla. 
+Existen al mismo tiempo, es decir, necesitas tener creada tu tabla en sql (tu base de datos) y luego puedes crear el modelo)
 Por ejemplo:
 - En SQL crearías una tabla `users`.
 - En SQLAlchemy creas una clase `User`.
